@@ -2,8 +2,9 @@
 import React from 'react';
 
 const Footer = () => (
-    <footer className="bg-blue-700 p-4 text-white text-center">
-        <p>2024 UTA CTF Playground.</p>
+    <footer className="flex bg-gradient-to-r from-blue-900 to-purple-900 p-4 space-x-2 text-white shadow-lg  opacity-90">
+        <img src="/PlayStation_1.svg" alt="PS Logo" className="w-8 h-8" />
+        <p>2024 HackUTA CTF.</p>
     </footer>
 );
 

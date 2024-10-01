@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import SyringeChallenge from '../components/challenges/SyringeChallenge'; // Import the new challenge
-import SwapChallenge from '../components/challenges/SwapChallenge'; // Import the new challenge
-import FileManagerChallenge from '../components/challenges/FileManagerChallenge'; // Import the new challenge
+import SyringeChallenge from '../components/challenges/SyringeChallenge';
+import SwapChallenge from '../components/challenges/SwapChallenge';
+import FileManagerChallenge from '../components/challenges/FileManagerChallenge';
 import StegChallenge from '../components/challenges/StegChallenge';
 import HiddenBit from '../components/challenges/HiddenBit';
 import CryptoChallenge from '../components/challenges/CryptoChallenge';
@@ -16,66 +16,40 @@ import RSAschoolKeys from '../components/challenges/RSAschoolKeys';
 import RSAoffice from '../components/challenges/RSAoffice';
 import HexProtect from '../components/challenges/HexProtect';
 
+// Challenge lookup object
+const challenges = {
+  'sql': { '1': SyringeChallenge },
+  'reverse-engineering': { '1': SwapChallenge },
+  'binary-exploitation': { '1': FileManagerChallenge },
+  'steganography': { '1': StegChallenge, '2': HiddenBit },
+  'crypto': { '1': CryptoChallenge, '2': HexProtect, '3': RSAoffice, '4': RSAschoolKeys },
+  'general-skills': { '1': WelcomeChallenge },
+  'web-exploitation': { '1': WebExploitationChallenge },
+  'command-injection': { '1': CommandInjectionChallenge },
+  'forensics': { '1': ThePasswordIsPasswordChallenge },
+  'osint': { '1': WheresMyFriend, '2': AirportCriminal },
+};
 
 const ChallengePage = () => {
-    const { category, id } = useParams();
+  const { category, id } = useParams();
 
-    // Logic to render the correct challenge based on category and id
-    const renderChallenge = () => {
-        if (category === 'sql' && id === '1') {
-            return <SyringeChallenge />;
-        }
-        if (category === 'reverse-engineering' && id === '1') {
-            return <SwapChallenge />;
-        }
-        if (category === 'binary-exploitation' && id === '1') {
-            return <FileManagerChallenge />;
-        }
-        if (category === 'steganography' && id === '1') {
-            return <StegChallenge />;
-        } 
-        else if (category === 'steganography' && id === '2') {
-            return <HiddenBit />;
-        }
-        if (category === 'crypto' && id === '1') {
-            return <CryptoChallenge />;
-        }
-        else if (category === 'crypto' && id === '2') {
-            return <HexProtect />;
-        }
-        else if (category === 'crypto' && id === '3') {
-            return <RSAoffice />;
-        }
-        else if (category === 'crypto' && id === '4') {
-            return <RSAschoolKeys />;
-        }
-        if (category === 'general-skills' && id === '1') {
-            return <WelcomeChallenge />;
-        }
-        if (category === 'web-exploitation' && id === '1') {
-            return <WebExploitationChallenge />;
-        }
-        if (category === 'command-injection' && id === '1') {
-            return <CommandInjectionChallenge />;
-        }
-        if (category === 'forensics' && id === '1') {
-            return <ThePasswordIsPasswordChallenge />;
-        }
-        if (category === 'osint' && id === '1') {
-            return <WheresMyFriend />;
-        }
-        else if (category === 'osint' && id === '2') {
-            return <AirportCriminal />;
-        }
-        // Add more conditional rendering for other categories and challenges as needed
-        return <p>Challenge not found.</p>;
-    };
+  // Get the challenge component based on the category and id
+  const ChallengeComponent = challenges[category]?.[id];
 
-    return (
-        <div className="container mx-auto p-5">
-            {renderChallenge()}
-        </div>
-    );
+  return (
+    <div className="h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white p-8">
+      <div className="container mx-auto bg-black bg-opacity-70 p-6 rounded-lg shadow-lg">
+        <h2 className="text-4xl font-bold mb-6 text-center drop-shadow-lg">
+          {category ? category.replace(/-/g, ' ').toUpperCase() : 'CHALLENGE'} - {id}
+        </h2>
+        {ChallengeComponent ? (
+          <ChallengeComponent />
+        ) : (
+          <p className="text-center text-xl">Challenge not found.</p>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ChallengePage;

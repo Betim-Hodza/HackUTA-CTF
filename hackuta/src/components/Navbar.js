@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-blue-900 to-purple-900 p-4 text-white shadow-lg opacity-15">
+    <nav className="bg-gradient-to-r from-blue-900 to-purple-900 p-4 text-white shadow-lg  opacity-90">
       <div className="container mx-auto flex items-center justify-between">
         {/* Conditionally redirect to PlaygroundPage if the user is logged in */}
         <Link to={user ? "/playground" : "/"} className="text-3xl font-bold flex items-center space-x-2">
