@@ -18,14 +18,14 @@ const HomePage = () => {
             ></div>
 
             {/* PS1-inspired Text */}
-            <h1 className="text-4xl text-white font-bold mb-6 drop-shadow-lg animate-pulse">HackUTA CTF</h1>
+            <h1 className="text-4xl text-white font-bold mb-6 drop-shadow-lg animate-pulse font-ps1">HackUTA CTF</h1>
 
             {/* Subheaders */}
-            <p className="mt-4 text-lg text-gray-300">CTF Challanges to make your brain hurt!</p>
-            <p className="mt-4 text-lg text-gray-300">Sign up or log in to save completed challenges!</p>
+            <p className="mt-4 text-xl text-gray-300 font-ps1">CTF Challanges to make your brain hurt!</p>
+            <p className="mt-4 text-xl text-gray-300 font-ps1">Sign up or log in to save completed challenges!</p>
             
             {/* Button */}
-            <div className="mt-8">
+            <div className="mt-8 font-ps1 text-xxl">
                 <Link 
                     to="/login" 
                     className="block px-8 py-4 bg-blue-600 text-white font-semibold rounded-full text-center hover:bg-blue-700 hover:scale-105 transition-transform duration-300 shadow-lg"

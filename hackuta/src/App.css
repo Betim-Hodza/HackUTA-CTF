@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Spyro';
+  src: url('/public/Spyro2-nZvM.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PS1';
+  src: url('/public/PS1font/EmotionEngine-8ynA.ttf') format('truetype');
+}

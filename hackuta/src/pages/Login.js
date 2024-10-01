@@ -22,8 +22,8 @@ const Login = () => {
 
   return (
     <div className="h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-black flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold mb-8 text-white drop-shadow-lg">Login</h1>
-      <form onSubmit={handleLogin} className="w-full max-w-sm bg-black bg-opacity-70 p-6 rounded-lg shadow-lg">
+      <h1 className="text-4xl font-bold mb-8 text-white drop-shadow-lg font-ps1">Login</h1>
+      <form onSubmit={handleLogin} className="w-full max-w-sm bg-black bg-opacity-70 p-6 rounded-lg shadow-lg font-ps1">
         <input
           type="email"
           value={email}
@@ -43,13 +43,13 @@ const Login = () => {
         <div className="flex space-x-4">
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300"
+            className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300 font-ps1"
           >
             Login
           </button>
           <Link 
             to="/signup" 
-            className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded text-center hover:bg-purple-700 transition duration-300"
+            className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded text-center hover:bg-purple-700 transition duration-300 font-ps1"
           >
             Sign Up
           </Link>
