@@ -1,0 +1,4 @@
+Welcome to HACKUTA's CTF portion, most of the questions will be in the format hackuta{your_flag_here} unless specified
+
+
+here the flag: hackuta{d0_70u_h@v3_g@m3$_0n_ur_ph0n3??}
