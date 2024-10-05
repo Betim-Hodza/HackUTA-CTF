@@ -4,8 +4,9 @@ import ChallengeCard from '../components/ChallengeCard';
 const PlaygroundPage = () => {
     const categories = [
         { title: 'Welcome', category: 'General Skills', difficulty: 'Easy', description: 'Challenges that test basic cybersecurity skills.', path: '/challenge/general-skills/1' },
-        { title: 'RSAhackuta', category: 'Cryptography', difficulty: 'Hard', description: 'Three suspicious numbers from the office.', path: '/challenge/crypto/1' },
-        { title: 'Where is my friend?', category: 'OSINT', difficulty: 'Easy', description: 'Can you help find my friend?', path: '/challenge/osint/1' },
+        { title: 'Airplane Friend', category: 'OSINT', difficulty: 'Medium', description: 'My friend is testing my skills again...', path: '/challenge/osint/1' },
+        { title: 'Hackercats', category: 'Forensics', difficulty: 'Medium', description: 'There seems to be more to this image than meets the eye...', path: '/challenge/forensics/1' },
+        { title: 'RSAhackuta', category: 'Cryptography', difficulty: 'Hard', description: 'We found these odd numbers scribbled in one of the rooms in the ERB...', path: '/challenge/crypto/1' },
     ];
 
     // State for search and filtering

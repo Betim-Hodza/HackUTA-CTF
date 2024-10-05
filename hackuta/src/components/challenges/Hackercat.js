@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import useCTFQuestion from '../../hooks/useCTFQuestion';
 
-const CryptoChallenge = () => {
+
+const Hackercat = () => {
     const [input, setInput] = useState('');
     const [message, setMessage] = useState('');
-    const { question, completed, markAsCompleted } = useCTFQuestion('CryptoChallenge');
+    const { question, completed, markAsCompleted } = useCTFQuestion('Hackercat');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,16 +33,19 @@ const CryptoChallenge = () => {
 
     return (
         <div className="container mx-auto p-5">
-            <h1 className="text-2xl font-bold mb-4">Scrambled Eggs: Cryptography Challenge</h1>
+            <h1 className="text-2xl font-bold mb-4">Airplane Friend</h1>
             <p className="mb-4">
-                In this challenge, you need to decrypt the following scrambled message. Use your cryptography skills to find the hidden meaning.
+            There seems to be more to this image than meets the eye... can you figure out what it hides? 
             </p>
-            <p className="bg-gray-100 text-lg p-4 mb-4 rounded">
-                Encrypted Message: <strong>246283004520049788012437</strong>
-            </p>
+
+            <img src="/Hackercat.png" alt="Hackercat" width={280} />
+
+            <a href="/Hackercat.png" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
+                Download File
+            </a>
             <form onSubmit={handleSubmit}>
                 <label className="block mb-2">
-                    Decrypted Message: <input type="text" className="border rounded p-2 w-full" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter your decrypted message here" />
+                    Your Answer: <input type="text" className="border rounded p-2 w-full bg-black" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter your answer here" />
                 </label>
                 <button type="submit" className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600">
                     Submit
@@ -52,4 +56,4 @@ const CryptoChallenge = () => {
     );
 };
 
-export default CryptoChallenge;
+export default Hackercat;

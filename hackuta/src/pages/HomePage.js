@@ -13,7 +13,7 @@ const HomePage = () => {
             {/* PS1 Logo */}
             <div
                 className="w-48 h-48 mb-5 bg-no-repeat bg-contain animate-pulse"
-                style={{ backgroundImage: 'url("PlayStation_1.svg")' }}
+                style={{ backgroundImage: 'url("HackUTA_Logo.png")' }}
                 onClick={playAudio}  // Add the onClick event here
             ></div>
 

@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Conditionally redirect to PlaygroundPage if the user is logged in */}
         <Link to={user ? "/playground" : "/"} className="text-3xl font-bold flex items-center space-x-2 font-ps1">
-          <img src="/PlayStation_1.svg" alt="PS Logo" className="w-8 h-8" />
+          <img src="/HackUTA_Logo.png" alt="PS Logo" className="w-8 h-8" />
           <span>HackUTA CTF</span>
         </Link>
         
