@@ -33,14 +33,14 @@ const Hackercat = () => {
 
     return (
         <div className="container mx-auto p-5">
-            <h1 className="text-2xl font-bold mb-4">Airplane Friend</h1>
+            <h1 className="text-2xl font-bold mb-4">Hackercat</h1>
             <p className="mb-4">
-            There seems to be more to this image than meets the eye... can you figure out what it hides? 
+            This is an odd image, is it hiding something? 
             </p>
 
-            <img src="/Hackercat.png" alt="Hackercat" width={280} />
+            <img src="/Hackercats.png" alt="Hackercat" width={280} />
 
-            <a href="/Hackercat.png" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
+            <a href="/Hackercats.png" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
                 Download File
             </a>
             <form onSubmit={handleSubmit}>
