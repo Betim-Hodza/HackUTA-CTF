@@ -4,7 +4,6 @@ import RSAhackuta from '../components/challenges/RSAhackuta';
 import WelcomeChallenge from '../components/challenges/WelcomeChallenge'
 import AirplaneFriend from '../components/challenges/AirplaneFriend';
 import Hackercat from '../components/challenges/Hackercat';
-import { inMemoryPersistence } from 'firebase/auth';
 
 // Challenge lookup object
 const challenges = {
