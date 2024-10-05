@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import useCTFQuestion from '../../hooks/useCTFQuestion';
 
-const WelcomeChallenge = () => {
+
+const AirplaneFriend = () => {
     const [input, setInput] = useState('');
     const [message, setMessage] = useState('');
-    const { question, completed, markAsCompleted } = useCTFQuestion('WelcomeChallenge');
+    const { question, completed, markAsCompleted } = useCTFQuestion('AirplaneFriend');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,12 +33,20 @@ const WelcomeChallenge = () => {
 
     return (
         <div className="container mx-auto p-5">
-            <h1 className="text-2xl font-bold mb-4">Welcome: General Skills Challenge</h1>
+            <h1 className="text-2xl font-bold mb-4">Airplane Friend</h1>
             <p className="mb-4">
-                In this challenge, you need to find the answer contained in a text file. 
-                Download the file from the link below, find the answer, and submit it below.
+            My friend is testing my skills again, he's sent me a photo of him on a window seat of a plane 
+            <br></br>
+            <br></br>
+             Can you help me find out where he is based on the photo? 
+             <br></br> 
+             format: City, Country
+
             </p>
-            <a href="/welcome.txt" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
+
+            <img src="/AirplaneFriend.jpg" alt="Airplanefriend" width={280} />
+
+            <a href="/AirplaneFriend.jpg" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
                 Download File
             </a>
             <form onSubmit={handleSubmit}>
@@ -53,4 +62,4 @@ const WelcomeChallenge = () => {
     );
 };
 
-export default WelcomeChallenge;
+export default AirplaneFriend;

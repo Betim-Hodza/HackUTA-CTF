@@ -113,7 +113,7 @@ def decoder(encoded):
 if __name__ == '__main__':
     primefiller()
     setkeys()
-    message = "ACM is pretty cool :3, but csec is better mwhahahaha"
+    message = "meow meow heres the flag: HACKUTA{h@v3_u_h3@rd_0f_c$3c?}"
     # Uncomment below for manual input
     # message = input("Enter the message\n")
     # Calling the encoding function

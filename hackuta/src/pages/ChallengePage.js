@@ -1,33 +1,22 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import SyringeChallenge from '../components/challenges/SyringeChallenge';
-import SwapChallenge from '../components/challenges/SwapChallenge';
-import FileManagerChallenge from '../components/challenges/FileManagerChallenge';
-import StegChallenge from '../components/challenges/StegChallenge';
-import HiddenBit from '../components/challenges/HiddenBit';
-import CryptoChallenge from '../components/challenges/CryptoChallenge';
-import WelcomeChallenge from '../components/challenges/WelcomeChallenge';
-import WebExploitationChallenge from '../components/challenges/WebExploitationChallenge';
-import CommandInjectionChallenge from '../components/challenges/CommandInjectionChallenge';
-import ThePasswordIsPasswordChallenge from '../components/challenges/ThePasswordIsPasswordChallenge';
-import WheresMyFriend from '../components/challenges/WheresMyFriend';
-import AirportCriminal from '../components/challenges/AirportCriminal';
-import RSAschoolKeys from '../components/challenges/RSAschoolKeys';
-import RSAoffice from '../components/challenges/RSAoffice';
-import HexProtect from '../components/challenges/HexProtect';
+import RSAhackuta from '../components/challenges/RSAhackuta';
+import WelcomeChallenge from '../components/challenges/WelcomeChallenge'
+import AirplaneFriend from '../components/challenges/AirplaneFriend';
+import { inMemoryPersistence } from 'firebase/auth';
 
 // Challenge lookup object
 const challenges = {
-  'sql': { '1': SyringeChallenge },
-  'reverse-engineering': { '1': SwapChallenge },
-  'binary-exploitation': { '1': FileManagerChallenge },
-  'steganography': { '1': StegChallenge, '2': HiddenBit },
-  'crypto': { '1': CryptoChallenge, '2': HexProtect, '3': RSAoffice, '4': RSAschoolKeys },
+  'sql': {  },
+  'reverse-engineering': {  },
+  'binary-exploitation': { },
+  'steganography': { },
+  'crypto': { '1': RSAhackuta },
   'general-skills': { '1': WelcomeChallenge },
-  'web-exploitation': { '1': WebExploitationChallenge },
-  'command-injection': { '1': CommandInjectionChallenge },
-  'forensics': { '1': ThePasswordIsPasswordChallenge },
-  'osint': { '1': WheresMyFriend, '2': AirportCriminal },
+  'web-exploitation': { },
+  'command-injection': {  },
+  'forensics': {},
+  'osint': { '1': AirplaneFriend },
 };
 
 const ChallengePage = () => {
