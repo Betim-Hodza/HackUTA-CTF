@@ -4,13 +4,14 @@ import RSAhackuta from '../components/challenges/RSAhackuta';
 import WelcomeChallenge from '../components/challenges/WelcomeChallenge'
 import AirplaneFriend from '../components/challenges/AirplaneFriend';
 import Hackercat from '../components/challenges/Hackercat';
+import Encrypception from '../components/challenges/Encrypception';
 
 // Challenge lookup object
 const challenges = {
   'sql': {  },
   'reverse-engineering': {  },
   'binary-exploitation': { },
-  'steganography': { },
+  'steganography': { '1': Encrypception },
   'crypto': { '1': RSAhackuta },
   'general-skills': { '1': WelcomeChallenge },
   'web-exploitation': { },
