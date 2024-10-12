@@ -7,6 +7,7 @@ const PlaygroundPage = () => {
         { title: 'Airplane Friend', category: 'OSINT', difficulty: 'Medium', description: 'My friend is testing my skills again...', path: '/challenge/osint/1' },
         { title: 'Trynfindme', category: 'OSINT', difficulty: 'Hard', description: 'theres a contest to find out whats the name of that highlighted building...', path: '/challenge/osint/2' },
         { title: 'Hackercats', category: 'Forensics', difficulty: 'Medium', description: 'There seems to be more to this image than meets the eye...', path: '/challenge/forensics/1' },
+        { title: 'ConvolutedTextHunt', category: 'Forensics', difficulty: 'Medium', description: 'A long, convoluted text file hides a valuable flag...', path: '/challenge/forensics/2' },
         { title: 'Encrypception', category: 'Steganography', difficulty: 'Medium', description: 'Theres this really really long message, and it looks weird...', path: '/challenge/steganography/1' },
         { title: 'RSAhackuta', category: 'Cryptography', difficulty: 'Hard', description: 'We found these odd numbers scribbled in one of the rooms in the ERB...', path: '/challenge/crypto/1' },
     ];
