@@ -38,6 +38,9 @@ const ConvolutedTextHunt = () => {
                 <br></br>
                 The executable is for Windows. macOS and Linux users may need to use a workaround like a virtual machine or Wine to run the program. 
             </p>
+            <a href="/VulnerabilityScript.exe" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
+                Download File
+            </a>
             <form onSubmit={handleSubmit}>
                 <label className="block mb-2">
                     Hidden Logic Result: <input type="text" className="border rounded p-2 w-full bg-black" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter decoded result" />

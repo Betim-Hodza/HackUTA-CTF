@@ -29,6 +29,7 @@ const ConvolutedTextHunt = () => {
             setMessage('Incorrect. Please try again.');
         }
     };
+    
 
     return (
         <div className="container mx-auto p-5">
@@ -38,6 +39,9 @@ const ConvolutedTextHunt = () => {
                 <br></br>
                 Can you find the true flag and decrypt it?"
             </p>
+            <a href="/texthunt.txt" download className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600 mb-4 inline-block">
+                Download File
+            </a>
             <form onSubmit={handleSubmit}>
                 <label className="block mb-2">
                     Hidden Logic Result: <input type="text" className="border rounded p-2 w-full bg-black" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter decoded result" />
