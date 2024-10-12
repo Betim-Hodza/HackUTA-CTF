@@ -42,8 +42,12 @@ const ConvolutedTextHunt = () => {
                 <label className="block mb-2">
                     Hidden Logic Result: <input type="text" className="border rounded p-2 w-full bg-black" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter decoded result" />
                 </label>
-                <button type="submit" className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600">
-                    Submit
+                <button 
+                    type="submit"
+                    className="bg-blue-500 text-white rounded p-2 mt-2 hover:bg-blue-600"
+                    disabled={completed}
+                 >
+                    {completed ? 'Completed' : 'Submit'}
                 </button>
             </form>
             <p className="mt-4 text-red-500">{message}</p>
