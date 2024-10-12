@@ -5,6 +5,7 @@ import WelcomeChallenge from '../components/challenges/WelcomeChallenge'
 import AirplaneFriend from '../components/challenges/AirplaneFriend';
 import Hackercat from '../components/challenges/Hackercat';
 import Encrypception from '../components/challenges/Encrypception';
+import Trynfindme from '../components/challenges/Trynfindme';
 
 // Challenge lookup object
 const challenges = {
@@ -17,7 +18,7 @@ const challenges = {
   'web-exploitation': { },
   'command-injection': {  },
   'forensics': { '1': Hackercat},
-  'osint': { '1': AirplaneFriend },
+  'osint': { '1': AirplaneFriend, '2': Trynfindme },
 };
 
 const ChallengePage = () => {
