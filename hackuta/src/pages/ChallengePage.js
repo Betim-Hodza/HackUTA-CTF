@@ -9,6 +9,7 @@ import Trynfindme from '../components/challenges/Trynfindme';
 import ConvolutedTextHunt from '../components/challenges/ConvolutedTextHunt';
 import VulnerableProgram from '../components/challenges/VulnerableProgram';
 import PasswordInput from '../components/challenges/PasswordInput';
+import Meowers from '../components/challenges/Meowers';
 
 // Challenge lookup object
 const challenges = {
@@ -21,7 +22,7 @@ const challenges = {
   'web-exploitation': { },
   'pwn': {'1': VulnerableProgram, '2': PasswordInput },
   'command-injection': {  },
-  'forensics': { '1': Hackercat, '2': ConvolutedTextHunt},
+  'forensics': { '1': Hackercat, '2': ConvolutedTextHunt, '3': Meowers},
   'osint': { '1': AirplaneFriend, '2': Trynfindme },
 };
 
