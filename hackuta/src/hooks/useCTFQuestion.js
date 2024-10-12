@@ -47,37 +47,37 @@ const useCTFQuestion = (questionId) => {
   }, [questionId]);
 
   const markAsCompleted = async () => {
-    try {
-      const user = auth.currentUser;
-      if (!user) throw new Error('User not authenticated');
-  
-      // Fetch current user progress
-      const progressRef = doc(db, 'users', user.uid);
-      const progressSnap = await getDoc(progressRef);
-  
-      const currentScore = progressSnap.exists() ? (progressSnap.data().score || 0) : 0;
-      const completedQuestions = progressSnap.exists() ? progressSnap.data().completedQuestions || [] : [];
-  
-      // Check if the question is already marked as completed
-      if (!completedQuestions.includes(questionId)) {
-        const newCompletedQuestions = [...completedQuestions, questionId];
-        const newScore = currentScore + (question.points || 0);
-  
-        // Update user progress
-        await setDoc(progressRef, {
-          completedQuestions: newCompletedQuestions,
-          score: newScore
-        }, { merge: true });
-      }
-  
+  try {
+    const user = auth.currentUser;
+    if (!user) throw new Error('User not authenticated');
+
+    // Fetch current user progress
+    const progressRef = doc(db, 'users', user.uid);
+    const progressSnap = await getDoc(progressRef);
+
+    const currentScore = progressSnap.exists() ? (progressSnap.data().score || 0) : 0;
+    const completedQuestions = progressSnap.exists() ? (progressSnap.data().completedQuestions || []) : [];
+
+    // Check if the question is already marked as completed
+    if (!completedQuestions.includes(questionId)) {
+      const newCompletedQuestions = [...completedQuestions, questionId];
+      const newScore = currentScore + (question.points || 0);
+
+      // Update user progress with the new score and completed questions
+      await setDoc(progressRef, {
+        completedQuestions: newCompletedQuestions,
+        score: newScore
+      }, { merge: true });
+
       // Mark the question as completed in the local state
       setCompleted(true);
-  
-    } catch (err) {
-      console.error('Error marking question as completed:', err);
-      throw err;
     }
-  };  
+    
+  } catch (err) {
+    console.error('Error marking question as completed:', err);
+    throw err;
+  }
+};
 
   return { question, loading, error, completed, markAsCompleted };
 };

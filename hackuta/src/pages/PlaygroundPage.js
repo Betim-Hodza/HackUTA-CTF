@@ -10,6 +10,7 @@ const PlaygroundPage = () => {
         { title: 'ConvolutedTextHunt', category: 'Forensics', difficulty: 'Medium', description: 'A long, convoluted text file hides a valuable flag...', path: '/challenge/forensics/2' },
         { title: 'Encrypception', category: 'Steganography', difficulty: 'Medium', description: 'Theres this really really long message, and it looks weird...', path: '/challenge/steganography/1' },
         { title: 'RSAhackuta', category: 'Cryptography', difficulty: 'Hard', description: 'We found these odd numbers scribbled in one of the rooms in the ERB...', path: '/challenge/crypto/1' },
+        { title: 'VulnerableProgram', category: 'Pwn', difficulty: 'Easy', description: 'You’ve been given a vulnerable .exe program. Can you figure out how to exploit it...', path: '/challenge/pwn/1' },
     ];
 
     // State for search and filtering
