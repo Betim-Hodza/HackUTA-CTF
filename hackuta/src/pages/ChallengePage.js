@@ -8,6 +8,7 @@ import Encrypception from '../components/challenges/Encrypception';
 import Trynfindme from '../components/challenges/Trynfindme';
 import ConvolutedTextHunt from '../components/challenges/ConvolutedTextHunt';
 import VulnerableProgram from '../components/challenges/VulnerableProgram';
+import PasswordInput from '../components/challenges/PasswordInput';
 
 // Challenge lookup object
 const challenges = {
@@ -18,7 +19,7 @@ const challenges = {
   'crypto': { '1': RSAhackuta },
   'general-skills': { '1': WelcomeChallenge },
   'web-exploitation': { },
-  'pwn': {'1': VulnerableProgram },
+  'pwn': {'1': VulnerableProgram, '2': PasswordInput },
   'command-injection': {  },
   'forensics': { '1': Hackercat, '2': ConvolutedTextHunt},
   'osint': { '1': AirplaneFriend, '2': Trynfindme },
